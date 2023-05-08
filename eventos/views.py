@@ -2,7 +2,6 @@ import csv
 import os
 from secrets import token_urlsafe
 from django.conf import settings
-
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
@@ -100,7 +99,7 @@ def gerar_csv(request, id):
     path = os.path.join(settings.MEDIA_ROOT, token)
 
     with open(path, 'w') as arq:
-        writer = csv.writer(arq, delimiter=",")
+        writer = csv.writer(arq, delimiter=',')
         for participante in participantes:
             x = (participante.username, participante.email)
             writer.writerow(x)

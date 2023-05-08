@@ -9,7 +9,7 @@
                 {% if messages %}
                     {% for message in messages %}
                         <div class="alert {{ message.tags }}">{{ message }}</div>
-                    {% enfor %}
+                    {% endfor %}
                 {% endif %}
                 <br>
                 <img width="100%" src="{{evento.logo.url}}">
@@ -32,7 +32,7 @@
                     </form>
                 {% endif %}
 
-                <form action="{% url 'inscrever_evento.html' evento.id %}" method="POST">{% csrf_token %}
+                <form action="{% url 'inscrever_evento' evento.id %}" method="POST">{% csrf_token %}
                     <input class="btn-principal" type="submit" value="QUERO PARTICIPAR">
                 </form>
 
