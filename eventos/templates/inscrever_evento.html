@@ -31,11 +31,6 @@
                         <input type="submit" class="btn-principal" value="QUERO PARTICIPAR">
                     </form>
                 {% endif %}
-
-                <form action="{% url 'inscrever_evento' evento.id %}" method="POST">{% csrf_token %}
-                    <input class="btn-principal" type="submit" value="QUERO PARTICIPAR">
-                </form>
-
             </div>
         </div>
     </div>
